@@ -1,11 +1,11 @@
 import React from 'react';
 import { ArrowDownIcon, GithubIcon, LinkedinIcon } from 'lucide-react';
 export const Hero = () => {
-  return <section id="home" className="relative min-h-screen w-full flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8 bg-gray-900">
+  return <section id="home" className="relative min-h-screen w-full flex items-center justify-center py-20 px-4 sm:px-6 lg:px-8">
       <div className="absolute inset-0 z-0 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-gray-900 to-gray-800"></div>
-        <div className="absolute top-20 right-0 w-72 h-72 bg-blue-900/30 rounded-full filter blur-3xl opacity-30"></div>
-        <div className="absolute bottom-20 left-0 w-80 h-80 bg-indigo-900/30 rounded-full filter blur-3xl opacity-30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-gray-900 dark:to-gray-800"></div>
+        <div className="absolute top-20 right-0 w-72 h-72 bg-blue-200 dark:bg-blue-900/30 rounded-full filter blur-3xl opacity-30"></div>
+        <div className="absolute bottom-20 left-0 w-80 h-80 bg-indigo-200 dark:bg-indigo-900/30 rounded-full filter blur-3xl opacity-30"></div>
       </div>
       <div className="container mx-auto max-w-5xl z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">

@@ -36,7 +36,7 @@ export const Contact = () => {
       }, 5000);
     }, 1500);
   };
-  return <section id="contact" className="py-20 w-full bg-gray-900">
+  return <section id="contact" className="py-20 w-full">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Contact Me</h2>

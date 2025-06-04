@@ -14,7 +14,7 @@ export const Skills = () => {
     title: 'Soft Skills',
     skills: ['Communication', 'Teamwork', 'Problem-solving', 'Time Management']
   }];
-  return <section id="skills" className="py-20 w-full bg-gray-800">
+  return <section id="skills" className="py-20 w-full bg-gray-50 dark:bg-gray-800/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl font-bold mb-4">Skills</h2>
