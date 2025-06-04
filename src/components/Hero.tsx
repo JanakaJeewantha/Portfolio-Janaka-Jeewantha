@@ -32,10 +32,10 @@ export const Hero = () => {
               </a>
             </div>
             <div className="flex gap-4 justify-center lg:justify-start pt-4">
-              <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors" aria-label="GitHub">
+              <a href="https://github.com/JanakaJeewantha" target="_blank" rel="noopener noreferrer" className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors" aria-label="GitHub">
                 <GithubIcon size={24} />
               </a>
-              <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors" aria-label="LinkedIn">
+              <a href="https://www.linkedin.com/in/janaka-jeewantha-9759a8369/" target="_blank" rel="noopener noreferrer" className="p-2 text-gray-600 hover:text-blue-600 dark:text-gray-400 dark:hover:text-blue-400 transition-colors" aria-label="LinkedIn">
                 <LinkedinIcon size={24} />
               </a>
             </div>
@@ -43,7 +43,7 @@ export const Hero = () => {
           <div className="flex justify-center">
             <div className="relative w-72 h-72 sm:w-80 sm:h-80">
               <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-blue-500 to-indigo-600 opacity-20 blur-2xl animate-pulse"></div>
-              <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1000&q=80" alt="Professional portrait of Janaka Jeewantha" className="relative z-10 w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg" />
+              <img src="https://i.postimg.cc/htqkqy3t/profilepic.jpg" alt="Professional portrait of Janaka Jeewantha" className="relative z-10 w-full h-full object-cover rounded-full border-4 border-white dark:border-gray-800 shadow-lg" />
               <div className="absolute -bottom-4 -right-4 bg-white dark:bg-gray-800 rounded-full p-3 shadow-lg">
                 <div className="bg-blue-600 text-white p-2 rounded-full">
                   <code className="text-xs font-bold">{'<coder/>'}</code>

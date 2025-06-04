@@ -5,8 +5,8 @@ export const About = () => {
     icon: <GraduationCapIcon size={24} />,
     title: 'Bachelor of Information Technology',
     institution: 'University of Moratuwa',
-    period: '2022 - Present',
-    details: 'Currently in 3rd semester'
+    period: '2023 - Present',
+    details: 'Currently in 3rd Year'
   }, {
     icon: <BookOpenIcon size={24} />,
     title: 'Diploma in Human Resource Management',

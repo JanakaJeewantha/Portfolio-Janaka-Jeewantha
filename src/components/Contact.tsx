@@ -65,7 +65,7 @@ export const Contact = () => {
                   <div>
                     <h4 className="font-medium">Email</h4>
                     <p className="text-gray-600 dark:text-gray-300 mt-1">
-                      janaka.jeewantha@example.com
+                      janakajeewantha2000@gmail.com
                     </p>
                   </div>
                 </div>
@@ -73,10 +73,10 @@ export const Contact = () => {
               <div className="mt-8">
                 <h4 className="font-medium mb-4">Connect with me</h4>
                 <div className="flex space-x-4">
-                  <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600 dark:hover:text-blue-400 rounded-full transition-colors" aria-label="LinkedIn">
+                  <a href="https://www.linkedin.com/in/janaka-jeewantha-9759a8369/" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600 dark:hover:text-blue-400 rounded-full transition-colors" aria-label="LinkedIn">
                     <LinkedinIcon size={20} />
                   </a>
-                  <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600 dark:hover:text-blue-400 rounded-full transition-colors" aria-label="GitHub">
+                  <a href="https://github.com/JanakaJeewantha" target="_blank" rel="noopener noreferrer" className="p-3 bg-gray-100 dark:bg-gray-700 text-gray-600 dark:text-gray-300 hover:bg-blue-100 dark:hover:bg-blue-900/50 hover:text-blue-600 dark:hover:text-blue-400 rounded-full transition-colors" aria-label="GitHub">
                     <GithubIcon size={20} />
                   </a>
                 </div>

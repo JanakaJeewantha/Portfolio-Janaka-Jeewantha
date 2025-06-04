@@ -85,7 +85,7 @@ export const Projects = () => {
                   </div>
                 </div>
                 <div className="mt-6">
-                  <a href="#" className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300">
+                  <a href="https://github.com/JanakaJeewantha/PaddyGateApp" className="inline-flex items-center text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300">
                     <span>View Project</span>
                     <ExternalLinkIcon size={16} className="ml-1" />
                   </a>
