@@ -58,7 +58,7 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
           <div className="flex items-center gap-2">
             {/* Download CV */}
             <a
-              href="#"
+              href="https://drive.google.com/file/d/1mWAPrUjlVDwJhsfRUzkJGUYr7sAN4WoB/view?usp=sharing"
               target="_blank"
               rel="noopener noreferrer"
               className="hidden sm:inline-flex items-center gap-1.5 px-4 py-2 text-sm font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white rounded-lg shadow-md shadow-indigo-500/25 hover:shadow-indigo-500/40 hover:scale-105 transition-all duration-300"
@@ -100,7 +100,7 @@ export const Navbar = ({ theme, toggleTheme }: NavbarProps) => {
             </a>
           ))}
           <a
-            href="#"
+            href="https://drive.google.com/file/d/1mWAPrUjlVDwJhsfRUzkJGUYr7sAN4WoB/view?usp=sharing"
             className="flex items-center gap-2 mt-2 px-4 py-3 rounded-xl text-sm font-semibold bg-gradient-to-r from-indigo-600 to-violet-600 text-white"
           >
             <DownloadIcon size={14} />

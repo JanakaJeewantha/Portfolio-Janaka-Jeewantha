@@ -76,7 +76,7 @@ export const Hero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-wrap gap-4 justify-center lg:justify-start">
               <a
-                href="#"
+                href="https://drive.google.com/file/d/1mWAPrUjlVDwJhsfRUzkJGUYr7sAN4WoB/view?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group inline-flex items-center gap-2 px-7 py-3.5 bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white font-semibold rounded-xl shadow-lg shadow-indigo-500/25 hover:shadow-indigo-500/45 hover:scale-105 transition-all duration-300"
