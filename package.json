@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "gh-pages -d dist",
     "dev": "npx vite",
     "build": "npx vite build",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
@@ -32,5 +32,6 @@
     "tailwindcss": "3.4.17",
     "typescript": "^5.5.4",
     "vite": "^5.2.0"
-  }
+  },
+  "homepage": "https://JanakaJeewantha.github.io/Portfolio-Janaka-Jeewantha/"
 }

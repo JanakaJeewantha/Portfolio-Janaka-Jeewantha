@@ -1,83 +1,117 @@
 import React from 'react';
-import { GraduationCapIcon, BookOpenIcon, BriefcaseIcon } from 'lucide-react';
-export const About = () => {
-  const educationItems = [{
-    icon: <GraduationCapIcon size={24} />,
+import { GraduationCapIcon, BookOpenIcon, BriefcaseIcon, CodeIcon, LayersIcon, AwardIcon } from 'lucide-react';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
+
+const EDUCATION = [
+  {
+    icon: <GraduationCapIcon size={22} />,
     title: 'Bachelor of Information Technology',
     institution: 'University of Moratuwa',
-    period: '2023 - Present',
-    details: 'Currently in 3rd Year'
-  }, {
-    icon: <BookOpenIcon size={24} />,
+    period: '2023 – Present',
+    detail: 'Currently in 3rd Year',
+    color: 'indigo',
+  },
+  {
+    icon: <BookOpenIcon size={22} />,
     title: 'Diploma in Human Resource Management',
-    institution: 'Open University, Polonnaruwa',
+    institution: 'Open University of Sri Lanka, Polonnaruwa',
     period: 'Completed',
-    details: ''
-  }, {
-    icon: <BriefcaseIcon size={24} />,
+    detail: '',
+    color: 'violet',
+  },
+  {
+    icon: <BriefcaseIcon size={22} />,
     title: 'Bachelor of ICT',
     institution: 'University of Vavuniya',
     period: '1 year',
-    details: 'Prior education'
-  }];
-  return <section id="about" className="py-20 w-full bg-gray-50 dark:bg-gray-800/50">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl font-bold mb-4">About Me</h2>
-          <div className="w-20 h-1 bg-blue-600 mx-auto"></div>
+    detail: 'Prior education',
+    color: 'purple',
+  },
+];
+
+const STATS = [
+  { icon: <CodeIcon size={22} />, label: 'Projects Built', value: '3+' },
+  { icon: <LayersIcon size={22} />, label: 'Tech Stacks', value: '10+' },
+  { icon: <AwardIcon size={22} />, label: 'Universities', value: '2' },
+];
+
+export const About = () => {
+  const titleRef   = useScrollAnimation();
+  const statsRef   = useScrollAnimation(0.1);
+  const leftRef    = useScrollAnimation();
+  const rightRef   = useScrollAnimation();
+
+  return (
+    <section id="about" className="py-24 w-full bg-slate-900/50 dark:bg-slate-900/50 relative">
+      <div className="absolute inset-0 opacity-30" style={{backgroundImage:'radial-gradient(circle at 80% 50%, rgba(99,102,241,0.1) 0%, transparent 60%)' }} />
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-6xl relative">
+
+        {/* Title */}
+        <div ref={titleRef} className="fade-in-up text-center mb-16">
+          <span className="text-indigo-400 text-sm font-semibold tracking-widest uppercase">Who I Am</span>
+          <h2 className="text-3xl sm:text-4xl font-bold mt-2 text-white">About Me</h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-indigo-500 to-violet-500 mx-auto mt-4 rounded-full" />
         </div>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <div className="order-2 lg:order-1">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-                Educational Background
-              </h3>
-              <div className="space-y-6">
-                {educationItems.map((item, index) => <div key={index} className="flex gap-4">
-                    <div className="flex-shrink-0 mt-1">
-                      <div className="p-3 bg-blue-100 dark:bg-blue-900/50 text-blue-600 dark:text-blue-400 rounded-full">
-                        {item.icon}
-                      </div>
-                    </div>
-                    <div>
-                      <h4 className="text-lg font-medium text-gray-800 dark:text-white">
-                        {item.title}
-                      </h4>
-                      <p className="text-gray-600 dark:text-gray-300">
-                        {item.institution}
-                      </p>
-                      <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-                        {item.period} {item.details && `• ${item.details}`}
-                      </p>
-                    </div>
-                  </div>)}
-              </div>
-              <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                I'm a tech enthusiast with a passion for creating innovative
-                solutions. My academic journey has equipped me with a strong
-                foundation in information technology and I'm constantly
-                expanding my knowledge in web development and software
-                engineering.
-              </p>
+
+        {/* Stats */}
+        <div ref={statsRef} className="fade-in-up grid grid-cols-3 gap-4 sm:gap-6 mb-16">
+          {STATS.map((stat, i) => (
+            <div key={i} className={'gradient-card glass p-5 text-center stagger-' + (i+1)}>
+              <div className="flex justify-center mb-2 text-indigo-400">{stat.icon}</div>
+              <div className="text-2xl sm:text-3xl font-bold gradient-text">{stat.value}</div>
+              <div className="text-slate-400 text-xs sm:text-sm mt-1">{stat.label}</div>
             </div>
-          </div>
-          <div className="order-1 lg:order-2 flex justify-center">
-            <div className="relative">
-              <div className="absolute -inset-1 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 opacity-30 blur-xl"></div>
-              <div className="relative overflow-hidden rounded-xl">
-                <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=800&q=80" alt="Tech workspace with laptop and coding environment" className="w-full h-auto rounded-xl shadow-lg" />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end">
-                  <div className="p-6">
-                    <p className="text-white font-medium">
-                      Passionate about building technology that makes a
-                      difference
+          ))}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+          {/* Left: Education */}
+          <div ref={leftRef} className="slide-in-left space-y-6">
+            <h3 className="text-xl font-semibold text-white">Educational Background</h3>
+            <div className="space-y-4">
+              {EDUCATION.map((item, i) => (
+                <div key={i} className="gradient-card glass p-5 flex gap-4 hover:scale-[1.02] transition-transform duration-300">
+                  <div className={'flex-shrink-0 p-3 rounded-xl bg-indigo-500/15 text-indigo-400'}>
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white">{item.title}</h4>
+                    <p className="text-slate-400 text-sm mt-0.5">{item.institution}</p>
+                    <p className="text-indigo-400 text-xs mt-1 font-medium">
+                      {item.period}{item.detail ? ' · ' + item.detail : ''}
                     </p>
                   </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right: Bio */}
+          <div ref={rightRef} className="slide-in-right space-y-6">
+            <h3 className="text-xl font-semibold text-white">My Story</h3>
+            <div className="gradient-card glass p-6 space-y-4">
+              <p className="text-slate-300 leading-relaxed">
+                I am a tech enthusiast with a passion for creating innovative solutions that make a real difference.
+                My academic journey spans multiple disciplines — from ICT to Human Resource Management — giving me
+                a unique perspective on building technology that serves people.
+              </p>
+              <p className="text-slate-300 leading-relaxed">
+                Currently in my 3rd year at the University of Moratuwa, I am focused on full-stack web development
+                and building scalable applications. I love turning complex problems into elegant, user-friendly experiences.
+              </p>
+              <div className="pt-2 border-t border-white/10">
+                <p className="text-slate-400 text-sm">Currently focused on</p>
+                <div className="flex flex-wrap gap-2 mt-2">
+                  {['React', 'Node.js', 'MongoDB', 'REST APIs', 'Android'].map(t => (
+                    <span key={t} className="px-3 py-1 text-xs font-medium bg-indigo-500/15 border border-indigo-500/25 text-indigo-300 rounded-full">{t}</span>
+                  ))}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };

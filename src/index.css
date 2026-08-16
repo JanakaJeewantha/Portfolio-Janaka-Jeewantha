@@ -3,3 +3,126 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 /* DO NOT DELETE THESE TAILWIND IMPORTS, OTHERWISE THE STYLING WILL NOT RENDER AT ALL */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+html { scroll-behavior: smooth; }
+body { font-family: 'Inter', sans-serif; }
+
+/* ── KEYFRAMES ── */
+@keyframes blob {
+  0%   { transform: translate(0px, 0px) scale(1); }
+  33%  { transform: translate(30px, -50px) scale(1.1); }
+  66%  { transform: translate(-20px, 20px) scale(0.9); }
+  100% { transform: translate(0px, 0px) scale(1); }
+}
+@keyframes floatUp {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-12px); }
+}
+@keyframes floatUpDelayed {
+  0%, 100% { transform: translateY(0px); }
+  50%       { transform: translateY(-8px); }
+}
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(99,102,241,0.4),  0 0 40px rgba(99,102,241,0.1); }
+  50%       { box-shadow: 0 0 40px rgba(139,92,246,0.7), 0 0 80px rgba(99,102,241,0.3); }
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+@keyframes shimmer {
+  0%   { background-position: -200% center; }
+  100% { background-position:  200% center; }
+}
+
+/* ── ANIMATION CLASSES ── */
+.animate-blob          { animation: blob 7s infinite ease-in-out; }
+.animation-delay-2000  { animation-delay: 2s; }
+.animation-delay-4000  { animation-delay: 4s; }
+.animate-float         { animation: floatUp 4s ease-in-out infinite; }
+.animate-float-delayed { animation: floatUpDelayed 5s ease-in-out 1s infinite; }
+.animate-spin-slow     { animation: spinSlow 8s linear infinite; }
+.animate-glow-pulse    { animation: glowPulse 2.5s ease-in-out infinite; }
+
+/* ── GLASS ── */
+.glass {
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.glass-light {
+  background: rgba(255,255,255,0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0,0,0,0.08);
+}
+
+/* ── GRADIENT TEXT ── */
+.gradient-text {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* ── GRADIENT CARD BORDER ── */
+.gradient-card {
+  position: relative;
+  border-radius: 16px;
+}
+.gradient-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(99,102,241,0.6), rgba(139,92,246,0.4), rgba(236,72,153,0.3));
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ── SCROLL REVEAL ── */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.75s cubic-bezier(0.25,0.46,0.45,0.94),
+              transform 0.75s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.fade-in-up.visible { opacity: 1; transform: translateY(0); }
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-40px);
+  transition: opacity 0.75s cubic-bezier(0.25,0.46,0.45,0.94),
+              transform 0.75s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.slide-in-left.visible { opacity: 1; transform: translateX(0); }
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(40px);
+  transition: opacity 0.75s cubic-bezier(0.25,0.46,0.45,0.94),
+              transform 0.75s cubic-bezier(0.25,0.46,0.45,0.94);
+}
+.slide-in-right.visible { opacity: 1; transform: translateX(0); }
+
+.stagger-1 { transition-delay: 0.10s; }
+.stagger-2 { transition-delay: 0.20s; }
+.stagger-3 { transition-delay: 0.30s; }
+.stagger-4 { transition-delay: 0.40s; }
+.stagger-5 { transition-delay: 0.50s; }
+.stagger-6 { transition-delay: 0.60s; }
+
+/* ── SCROLLBAR ── */
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: #020617; }
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #6366f1, #8b5cf6);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: linear-gradient(to bottom, #818cf8, #a78bfa); }
